@@ -1,0 +1,63 @@
+═══════════════════════════════════════════════════════════════
+  🔧 SOLUCIÓN AL ERROR DE RUTA DUPLICADA
+═══════════════════════════════════════════════════════════════
+
+ERROR ACTUAL:
+lstat /opt/render/project/src/liga-saltena-billar/liga-saltena-billar
+
+El problema es que Render está duplicando la ruta porque:
+- Root Directory = liga-saltena-billar
+- Y luego busca liga-saltena-billar/Dockerfile
+- Esto crea: liga-saltena-billar/liga-saltena-billar
+
+───────────────────────────────────────────────────────────────
+SOLUCIÓN CORRECTA
+───────────────────────────────────────────────────────────────
+
+Si configuraste Root Directory como "liga-saltena-billar",
+entonces Render YA está dentro de ese directorio.
+
+Por lo tanto, los paths de Docker deben ser RELATIVOS a ese directorio:
+
+Root Directory:
+  liga-saltena-billar
+
+Dockerfile Path:
+  Dockerfile
+  (NO: liga-saltena-billar/Dockerfile)
+
+Docker Build Context Directory:
+  .
+  (O dejar vacío)
+  (NO: liga-saltena-billar)
+
+───────────────────────────────────────────────────────────────
+CONFIGURACIÓN COMPLETA CORRECTA
+───────────────────────────────────────────────────────────────
+
+OPCIÓN 1: Con Root Directory configurado
+─────────────────────────────────────────
+Root Directory:
+  liga-saltena-billar
+
+Dockerfile Path:
+  Dockerfile
+
+Docker Build Context Directory:
+  .
+  (O dejar vacío)
+
+───────────────────────────────────────────────────────────────
+
+OPCIÓN 2: Sin Root Directory (si el proyecto está en la raíz)
+───────────────────────────────────────────────────────────────
+Root Directory:
+  (dejar vacío)
+
+Dockerfile Path:
+  liga-saltena-billar/Dockerfile
+
+Docker Build Context Directory:
+  liga-saltena-billar
+
+═══════════════════════════════════════════════════════════════
