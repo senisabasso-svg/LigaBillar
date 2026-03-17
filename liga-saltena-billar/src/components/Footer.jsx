@@ -14,8 +14,30 @@ const Footer = () => {
   ]
 
   const interestLinks = [
-    { name: 'Federación Argentina de Billar', href: 'https://federacionargentinadebillar.org/', external: true },
-    { name: 'Federación Uruguaya de Billar', href: '#', external: false }
+    {
+      name: 'Confederación Panamericana de Billar',
+      href: 'https://cpbillar.net/',
+      external: true,
+      imgSrc: '/links-interes/Logo-cpb-icono.png'
+    },
+    {
+      name: 'Unión Mundial de Billar',
+      href: 'https://www.umb-carom.org/ProductDetails.aspx?id=363&ide=2324&lng=2',
+      external: true,
+      imgSrc: '/links-interes/UMB.png'
+    },
+    {
+      name: 'GCS Billiardo',
+      href: 'https://www.gestionecs.com/#google_vignette',
+      external: true,
+      imgSrc: null
+    },
+    {
+      name: 'Billard Channel',
+      href: 'https://www.gestionecs.com/#google_vignette',
+      external: true,
+      imgSrc: '/links-interes/Billard-Channel.jpg'
+    }
   ]
 
   return (
@@ -67,11 +89,23 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h4>Enlaces de Interés</h4>
-            <ul>
+            <ul className="interest-links">
               {interestLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} target={link.external ? '_blank' : '_self'} rel={link.external ? 'noopener noreferrer' : ''}>
-                    {link.name}
+                  <a
+                    className="interest-link"
+                    href={link.href}
+                    target={link.external ? '_blank' : '_self'}
+                    rel={link.external ? 'noopener noreferrer' : ''}
+                  >
+                    {link.imgSrc ? (
+                      <img className="interest-logo" src={link.imgSrc} alt={link.name} loading="lazy" />
+                    ) : (
+                      <div className="interest-logo placeholder" aria-hidden="true">
+                        GCS
+                      </div>
+                    )}
+                    <span className="interest-name">{link.name}</span>
                   </a>
                 </li>
               ))}

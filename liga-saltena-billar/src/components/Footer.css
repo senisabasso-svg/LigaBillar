@@ -68,6 +68,57 @@
   padding-left: 5px;
 }
 
+.interest-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.interest-links li {
+  margin-bottom: 0;
+}
+
+.interest-link {
+  display: flex !important;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  opacity: 1;
+}
+
+.interest-link:hover {
+  padding-left: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.interest-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  object-fit: contain;
+  padding: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.interest-logo.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--dark-green);
+  letter-spacing: 0.5px;
+}
+
+.interest-name {
+  font-weight: 600;
+  opacity: 0.95;
+  line-height: 1.2;
+}
+
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
