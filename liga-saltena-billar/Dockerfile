@@ -1,5 +1,5 @@
-# Usar imagen base de Node
-FROM node:18.17.0-alpine
+# Usar imagen base de Node 20 (Vite 8 requiere Node 20.19+ o 22.12+)
+FROM node:20-alpine
 
 # Establecer directorio de trabajo
 WORKDIR /app

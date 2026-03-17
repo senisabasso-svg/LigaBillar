@@ -1,0 +1,40 @@
+═══════════════════════════════════════════════════════════════
+  🔧 SOLUCIÓN AL ERROR DE VERSIÓN DE NODE
+═══════════════════════════════════════════════════════════════
+
+ERROR:
+Vite requires Node.js version 20.19+ or 22.12+
+Estás usando Node.js 18.17.0
+
+───────────────────────────────────────────────────────────────
+SOLUCIÓN APLICADA
+───────────────────────────────────────────────────────────────
+
+✅ Dockerfile actualizado:
+   - Cambiado de: node:18.17.0-alpine
+   - Cambiado a: node:20-alpine
+
+───────────────────────────────────────────────────────────────
+PRÓXIMOS PASOS
+───────────────────────────────────────────────────────────────
+
+1. Hacer commit y push de los cambios:
+   git add Dockerfile
+   git commit -m "Update Node version to 20 for Vite compatibility"
+   git push
+
+2. Render detectará automáticamente el cambio y hará un nuevo deploy
+
+3. El build debería funcionar correctamente ahora
+
+───────────────────────────────────────────────────────────────
+NOTA
+───────────────────────────────────────────────────────────────
+
+Vite 8.0.0 requiere:
+- Node.js 20.19+ O
+- Node.js 22.12+
+
+Node 20-alpine es la versión LTS más estable y compatible.
+
+═══════════════════════════════════════════════════════════════
