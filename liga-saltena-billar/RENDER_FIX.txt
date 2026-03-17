@@ -1,45 +1,43 @@
 ═══════════════════════════════════════════════════════════════
-  CONFIGURACIÓN RÁPIDA PARA RENDER.COM
+  ⚠️ CORRECCIÓN DEL ERROR EN RENDER
 ═══════════════════════════════════════════════════════════════
 
-TIPO DE SERVICIO: Web Service
+ERROR ACTUAL:
+Root directory "cd liga-saltena-billar" does not exist
 
 ───────────────────────────────────────────────────────────────
-CONFIGURACIÓN BÁSICA
+SOLUCIÓN
 ───────────────────────────────────────────────────────────────
-Nombre: liga-saltena-billar
-Entorno: Node
-Plan: Free
+
+En Render, en la sección "Build & Deploy" o "General":
+
+Root Directory:
+  ✅ CORRECTO: liga-saltena-billar
+  ❌ INCORRECTO: cd liga-saltena-billar
 
 ───────────────────────────────────────────────────────────────
-BUILD & DEPLOY
+CONFIGURACIÓN COMPLETA CORRECTA
 ───────────────────────────────────────────────────────────────
-Build Command:
-  npm install && npm run build
 
-Start Command:
-  npm start
+Root Directory:
+  liga-saltena-billar
+  (SIN el "cd" al principio)
 
-───────────────────────────────────────────────────────────────
-VARIABLES DE ENTORNO
-───────────────────────────────────────────────────────────────
-NODE_VERSION = 18.17.0
+Dockerfile Path:
+  liga-saltena-billar/Dockerfile
 
-───────────────────────────────────────────────────────────────
-REPOSITORIO
-───────────────────────────────────────────────────────────────
-Repositorio: [Tu URL de GitHub]
-Rama: main
-Root Directory: liga-saltena-billar
-  (Solo si el proyecto está dentro de una subcarpeta)
-  ⚠️ IMPORTANTE: Solo el nombre del directorio, SIN "cd"
+Docker Build Context Directory:
+  liga-saltena-billar
 
 ───────────────────────────────────────────────────────────────
-NOTAS IMPORTANTES
+PASOS PARA CORREGIR
 ───────────────────────────────────────────────────────────────
-✓ Activar "Auto-Deploy" para despliegue automático
-✓ El puerto se configura automáticamente con $PORT
-✓ Render asigna HTTPS automáticamente
-✓ Dominio gratuito: tu-app.onrender.com
+
+1. Ve a tu servicio en Render
+2. Click en "Settings" o "Configuración"
+3. Busca "Root Directory" o "Directorio Raíz"
+4. Cambia de "cd liga-saltena-billar" a solo "liga-saltena-billar"
+5. Guarda los cambios
+6. Render hará un nuevo deploy automáticamente
 
 ═══════════════════════════════════════════════════════════════

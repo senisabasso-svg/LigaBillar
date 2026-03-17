@@ -21,6 +21,8 @@ Dockerfile Path:
 Docker Build Context Directory:
   liga-saltena-billar
   (O dejar vacío si el Dockerfile está en la raíz)
+  
+⚠️ IMPORTANTE: NO pongas "cd" antes del nombre del directorio
 
 Docker Command:
   (Dejar vacío - usa el CMD del Dockerfile)
