@@ -1,0 +1,108 @@
+.institucional-section {
+  background: var(--white);
+}
+
+.subsection {
+  margin-bottom: 4rem;
+}
+
+.subsection h3 {
+  color: var(--primary-green);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--light-green);
+}
+
+.authorities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.authority-card {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.authority-card:hover {
+  border-color: var(--primary-green);
+}
+
+.authority-icon {
+  font-size: 3rem;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.authority-card:hover .authority-icon {
+  transform: scale(1.1);
+}
+
+.authority-card h4 {
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.authority-card p {
+  color: var(--primary-green);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.fiscal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.fiscal-card {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.fiscal-card:hover {
+  border-color: var(--primary-green);
+}
+
+.fiscal-icon {
+  font-size: 3rem;
+  color: var(--primary-green);
+  transition: transform 0.3s ease;
+}
+
+.fiscal-card:hover .fiscal-icon {
+  transform: scale(1.1);
+}
+
+.fiscal-card p {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .authorities-grid,
+  .fiscal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subsection h3 {
+    font-size: 1.5rem;
+  }
+}

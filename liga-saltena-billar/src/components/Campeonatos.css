@@ -1,0 +1,92 @@
+.campeonatos-section {
+  background: var(--bg-light);
+}
+
+.subsection {
+  margin-bottom: 4rem;
+}
+
+.subsection h3 {
+  color: var(--primary-green);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--light-green);
+}
+
+.championship-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.championship-item {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-green);
+}
+
+.championship-item:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.championship-icon {
+  font-size: 2rem;
+  color: var(--primary-green);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.championship-item h4 {
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.championship-item ul {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  color: var(--text-light);
+  list-style: none;
+}
+
+.championship-item ul li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.championship-item ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.federation-text {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .subsection h3 {
+    font-size: 1.5rem;
+  }
+
+  .championship-item {
+    padding: 1.5rem;
+  }
+}
