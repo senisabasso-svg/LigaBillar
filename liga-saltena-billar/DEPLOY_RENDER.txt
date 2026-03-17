@@ -1,0 +1,44 @@
+═══════════════════════════════════════════════════════════════
+  CONFIGURACIÓN RÁPIDA PARA RENDER.COM
+═══════════════════════════════════════════════════════════════
+
+TIPO DE SERVICIO: Web Service
+
+───────────────────────────────────────────────────────────────
+CONFIGURACIÓN BÁSICA
+───────────────────────────────────────────────────────────────
+Nombre: liga-saltena-billar
+Entorno: Node
+Plan: Free
+
+───────────────────────────────────────────────────────────────
+BUILD & DEPLOY
+───────────────────────────────────────────────────────────────
+Build Command:
+  npm install && npm run build
+
+Start Command:
+  npm start
+
+───────────────────────────────────────────────────────────────
+VARIABLES DE ENTORNO
+───────────────────────────────────────────────────────────────
+NODE_VERSION = 18.17.0
+
+───────────────────────────────────────────────────────────────
+REPOSITORIO
+───────────────────────────────────────────────────────────────
+Repositorio: [Tu URL de GitHub]
+Rama: main
+Root Directory: liga-saltena-billar
+  (Solo si el proyecto está dentro de una subcarpeta)
+
+───────────────────────────────────────────────────────────────
+NOTAS IMPORTANTES
+───────────────────────────────────────────────────────────────
+✓ Activar "Auto-Deploy" para despliegue automático
+✓ El puerto se configura automáticamente con $PORT
+✓ Render asigna HTTPS automáticamente
+✓ Dominio gratuito: tu-app.onrender.com
+
+═══════════════════════════════════════════════════════════════

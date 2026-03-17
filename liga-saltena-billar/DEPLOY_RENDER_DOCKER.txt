@@ -1,0 +1,50 @@
+═══════════════════════════════════════════════════════════════
+  CONFIGURACIÓN PARA RENDER.COM (CON DOCKER)
+═══════════════════════════════════════════════════════════════
+
+TIPO DE SERVICIO: Web Service (Docker)
+
+───────────────────────────────────────────────────────────────
+CONFIGURACIÓN BÁSICA
+───────────────────────────────────────────────────────────────
+Nombre: liga-saltena-billar
+Entorno: Docker
+Plan: Free
+
+───────────────────────────────────────────────────────────────
+DOCKER CONFIGURATION
+───────────────────────────────────────────────────────────────
+Dockerfile Path:
+  liga-saltena-billar/Dockerfile
+  (O solo: Dockerfile si está en la raíz)
+
+Docker Build Context Directory:
+  liga-saltena-billar
+  (O dejar vacío si el Dockerfile está en la raíz)
+
+Docker Command:
+  (Dejar vacío - usa el CMD del Dockerfile)
+
+───────────────────────────────────────────────────────────────
+VARIABLES DE ENTORNO
+───────────────────────────────────────────────────────────────
+PORT = 3000
+  (Render lo asigna automáticamente, pero puedes ponerlo por si acaso)
+
+───────────────────────────────────────────────────────────────
+REPOSITORIO
+───────────────────────────────────────────────────────────────
+Repositorio: [Tu URL de GitHub]
+Rama: main
+Root Directory: liga-saltena-billar
+  (Solo si el proyecto está dentro de una subcarpeta)
+
+───────────────────────────────────────────────────────────────
+NOTAS IMPORTANTES
+───────────────────────────────────────────────────────────────
+✓ El Dockerfile ya está creado y configurado
+✓ Usa serve para servir los archivos estáticos
+✓ El puerto se configura automáticamente
+✓ Activar "Auto-Deploy" para despliegue automático
+
+═══════════════════════════════════════════════════════════════
